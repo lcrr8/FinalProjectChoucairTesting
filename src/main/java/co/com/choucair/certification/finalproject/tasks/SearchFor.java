@@ -53,9 +53,6 @@ public class SearchFor implements Task
                 Enter.theValue(data.get(CERO).getMessage()).into(ADDITIONAL_MESSAGE_FIELD),
                 Scroll.to(SELECT_FILE).andAlignToBottom(),
                 Scroll.to(SEND_BUTTON).andAlignToBottom(),
-                WaitUntil.the(CAPTCHA_FIELD, isEnabled()).forNoMoreThan(10).seconds(),
-                WaitUntil.the(CAPTCHA_FIELD, isVisible()).forNoMoreThan(10).seconds(),
-                Click.on(CAPTCHA_FIELD),
                 Click.on(SEND_BUTTON)
                 );
     }

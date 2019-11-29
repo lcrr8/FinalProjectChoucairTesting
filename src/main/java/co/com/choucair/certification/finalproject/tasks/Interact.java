@@ -12,7 +12,6 @@ import org.openqa.selenium.Keys;
 
 
 import static co.com.choucair.certification.finalproject.userinterface.LocatorChoucairWebSite.*;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class Interact implements Task
@@ -29,13 +28,10 @@ public class Interact implements Task
         actor.attemptsTo(
                 Hit.the(Keys.PAGE_DOWN).into(BE_CHOUCAIR_SECTION),
                 Hit.the(Keys.PAGE_UP).into(ANNOUNCEMENT_SECTION),
-                WaitUntil.the(ANNOUNCEMENT_SECTION, isVisible()).forNoMoreThan(10).seconds(),
                 Click.on(ANNOUNCEMENT_SECTION),
-                Scroll.to(SEARCH_KEYWORDS).andAlignToBottom(),
-                Scroll.to(AVAILABLE_JOBS_SECTION).andAlignToBottom(),
-                Scroll.to(PREPARE_TO_APPLY_SECTION).andAlignToTop(),
-                WaitUntil.the(PREPARE_TO_APPLY_SECTION, isVisible()).forNoMoreThan(10).seconds(),
-                Scroll.to(ABOUT_TESTING_LINKS).andAlignToBottom(),
+                Scroll.to(SEARCH_JOBS_BUTTON).andAlignToBottom(),
+                Click.on(SEARCH_LOCATION),
+                Scroll.to(TESTER_ANALYST_OPTION).andAlignToBottom(),
                 Scroll.to(ABOUT_TESTING_LINKS).andAlignToTop()
                 );
 
