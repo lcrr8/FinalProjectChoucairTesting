@@ -30,6 +30,7 @@ public class Interact implements Task
                 Hit.the(Keys.PAGE_UP).into(ANNOUNCEMENT_SECTION),
                 Click.on(ANNOUNCEMENT_SECTION),
                 Scroll.to(SEARCH_JOBS_BUTTON).andAlignToBottom(),
+                WaitUntil.the(SEARCH_JOBS_BUTTON, isVisible()).forNoMoreThan(10).seconds(),
                 Click.on(SEARCH_LOCATION),
                 Scroll.to(TESTER_ANALYST_OPTION).andAlignToBottom(),
                 Scroll.to(ABOUT_TESTING_LINKS).andAlignToTop()
